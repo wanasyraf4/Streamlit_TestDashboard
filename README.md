@@ -104,7 +104,7 @@ Start with an empty temporary package and set its accumulated cost and weight to
 
 - Iterate Over Items:
 For each item, check if adding the item to the current package would keep the total cost of the package below $250.
->If yes, add the item to the current package.
+>If yes, add the item to the current package.<br/>
 >If no, finalize the current package and start a new one. <br/>
 
 **Step 4: Price and Weight Balancing**<br>
