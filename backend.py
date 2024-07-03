@@ -8,6 +8,16 @@ def load_data(filepath):
     df.columns = ['Name', 'Price ($)', 'Weight (g)']
     return df
 
+def calculate_courier_charge(weight):
+    if weight <= 200:
+        return 5
+    elif weight <= 500:
+        return 10
+    elif weight <= 1000:
+        return 15
+    else:
+        return 20
+
 def split_func(df):
     # Convert data types within the function
     df['Price ($)'] = pd.to_numeric(df['Price ($)'], errors='coerce')
@@ -26,24 +36,19 @@ def split_func(df):
         current_package = []
         current_package_cost = 0
         current_package_weight = 0
-
-        # Iterate over a copy of the list for safe modification during the loop
         for item in remaining_items[:]:
             item_name, item_price, item_weight = item
-
-            # Ensure adding this item won't exceed the $250 price limit
             if current_package_cost + item_price < 250:
                 current_package.append(item_name)
                 current_package_cost += item_price
                 current_package_weight += item_weight
                 remaining_items.remove(item)
-
-        # Store the package details
         if current_package:
+            courier_charge = calculate_courier_charge(current_package_weight)
             packages.append({
                 'items': current_package,
                 'total_price': current_package_cost,
-                'total_weight': current_package_weight
+                'total_weight': current_package_weight,
+                'courier_price': courier_charge
             })
-
     return packages
