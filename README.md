@@ -1,4 +1,5 @@
 # Streamlit_TestDashboard
+
 ## Problem Statement and Requirements
 
 Make a solution that solves the following problem.
@@ -82,9 +83,9 @@ Minimize the number of packages $\( n \)$ and the variance in weight among these
      
    - Minimize the variance in weights:
 
-     $$\text{Var}(W) = \frac{1}{n} \sum_{j=1}^{n} (W_j - \bar{W})^2$$
+     $$\sigma^2(W) = \frac{1}{n} \sum_{j=1}^{n} (W_j - \bar{W})^2$$
      
-   Where $\( \bar{W} = \frac{1}{n} \sum_{j=1}^{n} W_j \)$ is the average weight of the packages. <br/>
+   Where $\(\bar{W} = \frac{1}{n} \sum_{j=1}^{n} W_j \)$ is the average weight of the packages. <br/>
 
 ## Algorithm Pipeline
 
