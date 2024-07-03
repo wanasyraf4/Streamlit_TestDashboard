@@ -120,6 +120,14 @@ After all items are assigned to initial packages, calculate the average weight o
 - Adjust Packages:
 Iterate through the packages, redistributing items between packages where necessary to minimize the difference between each package’s weight and the average weight, ensuring that no package's cost exceeds $250. <br/>
 
+```
+            if current_package_cost + item_price < 250:
+                current_package.append(item_name)
+                current_package_cost += item_price
+                current_package_weight += item_weight
+                remaining_items.remove(item)
+```
+
 **Step 5: Finalization**<br>
 Complete Packaging:
 Ensure all items are placed in a package.
