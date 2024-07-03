@@ -22,5 +22,5 @@ if st.button('Place order'):
         st.write(f"Items - {', '.join(package['items'])}")
         st.write(f"Total weight - {package['total_weight']}g")
         st.write(f"Total price - ${package['total_price']}")
-    st.write(f"Courier price - $15")  # Assuming a static courier price for simplicity
-
+        # Display dynamically calculated courier price for each package
+        st.write(f"Courier price - ${package['courier_price']}")
