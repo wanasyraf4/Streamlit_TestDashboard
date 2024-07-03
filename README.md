@@ -1,5 +1,11 @@
 # Streamlit_TestDashboard
 
+## File 
+Test_info.csv - Main raw data file (unprocessed) <br>
+app.py - main webapp entry and front end  <br>
+backend.py - backend logic  <br>
+flow.ipynb - breakdown of algorithm pipeline or step by step how to solve the problem statement  <br>
+
 ## Problem Statement and Requirements
 
 Make a solution that solves the following problem.
